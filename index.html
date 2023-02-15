@@ -1,0 +1,63 @@
+<html>
+
+<head>
+    <title>Hand Gesture</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="main.js"></script>
+</head>
+</head>
+
+<body>
+    <h2 class="h2">Hand Gestures<br>
+        <span>&#128077;</span>
+        <span>&#128078;</span>
+        <span>&#128080;</span>
+        <span>&#9995;</span>
+        <span>&#9996;</span>
+    </h2>
+    <br><br>
+
+    <p style="font-size: 22px;">Take a picture of your hand to predict gesture
+        <br>
+        <i>Good<span>&#128077;</span></i>
+        <br>
+        <i>Not good<span>&#128078;</span></i>
+        <br>
+        <i>Open hands<span>&#128080;</span></i>
+        <br>
+        <i>All ok<span>&#9995;</span></i>
+        <br>
+        <i>Victory<span>&#9996;</span></i>
+        <br>
+    </p>
+    <div class="col-md-4 col-sm-12 col-xs-12">
+        <label class="pre">Webcam</label>
+        <div id="camera"></div><br>
+        <button onclick="take_snapshot();" class="btn btn-warning">Take Picture</button>
+    </div>
+    <div class="col-md-4 col-sm-12 col-xs-12">
+        <label class="pre">Prediction</label>
+        <p id="gesture_name"></p>
+        <p id="Gesture"></p>
+    </div>
+    <div class="col-md-4 col-sm-12 col-xs-12">
+        <label class="pre">Snapshot</label>
+        <div id="result"></div>
+        <br>
+        <button onclick="check()" class="btn btn-warning">Predict</button>
+    </div>
+    </center>
+
+    </div>
+
+</body>
+
+</html>
